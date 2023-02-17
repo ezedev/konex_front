@@ -1,0 +1,33 @@
+<div class="card border-primary mb-3">
+    <div class="card-header">Medicines</div>
+    <div class="card-body text-primary">
+      <h5 class="card-title">Medicines List</h5>
+      <div class="my-2 text-left">
+        <button class="btn btn-rounded btn-primary" [routerLink]="['form']"> create medicine</button>
+      </div>
+      <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>name</th>
+                <th>factory Laboratory</th>
+                <th>creation date</th>
+                <th>dueDate</th>
+                <th>stock</th>
+                <th>unit value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let medicine of medicines">
+                <td>{{ medicine.id}}</td>
+                <td>{{ medicine.name}}</td>
+                <td>{{ medicine.factoryLaboratory}}</td>
+                <td>{{ medicine.creationDate}}</td>
+                <td>{{ medicine.dueDate}}</td>
+                <td>{{ medicine.stock}}</td>
+                <td>{{ medicine.UnitValue}}</td>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+</div>

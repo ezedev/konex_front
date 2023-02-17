@@ -1,0 +1,55 @@
+<div class="card bg-dark text-white">
+    <div class="card-header">Create new Medicine</div>
+    <div class="card-body">
+        <form (ngSubmit)="create()">
+            <div class="form-group row">
+                <label for="name" class="col-form-label col-sm-2">Name</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" [(ngModel)] ="medicine.name" name="name">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="factoryLaboratory" class="col-form-label col-sm-2">factoryLaboratory</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" [(ngModel)] ="medicine.factoryLaboratory" name="factoryLaboratory">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="creationDate" class="col-form-label col-sm-2">creationDate</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" [(ngModel)] ="medicine.creationDate" name="creationDate">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="dueDate" class="col-form-label col-sm-2">dueDate</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" [(ngModel)] ="medicine.dueDate" name="dueDate">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="stock" class="col-form-label col-sm-2">stock</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" [(ngModel)] ="medicine.stock" name="stock">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="UnitValue" class="col-form-label col-sm-2">UnitValue</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" [(ngModel)] ="medicine.UnitValue" name="UnitValue">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-sm-6">
+                    <button class="btn btn-primary" role="button">Create</button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>
