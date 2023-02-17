@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Medicine } from './medicine';
 import { MedicineService } from './medicine.service';
 import { Router } from '@angular/router';
+import swal from 'sweetalert2';
 
 @Component({
   selector: 'app-form',
@@ -20,8 +21,10 @@ export class FormComponent {
 
   public create():void {
     this.medicineService.create(this.medicine).subscribe(
-      response => this.router.navigate(['/medicines'])
-    );
+      response => {
+       this.router.navigate(['/medicines'])
+      swal('Medicine created', "OK" , 'success')
+      });
   }
 
 }
